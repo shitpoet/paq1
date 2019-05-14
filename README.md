@@ -12,4 +12,18 @@ See also this <a href="https://www.youtube.com/watch?v=J5WX-wN_RKY">video</a> by
 
 See also comments in cpp file.
 
-License: GPL.
+## Note on compilation on 64-bit Linux 
+
+To get correct results on 64-bit OS it can be needed to change `typedef` on line 304:
+
+```c++
+//typedef unsigned long U32;
+typedef unsigned int U32;
+```
+
+Because `U32` meant to be 32-bit integer, but `long` is usually 64-bit on 64-bit Linux.
+    
+
+## Licence 
+
+Licence: GPL.
